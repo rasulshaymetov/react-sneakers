@@ -6,6 +6,7 @@ import favourite from './/img/favourite.svg'
 import search from './/img/search.svg'
 import unliked from './/img/unliked.svg' 
 import remove from './/img/remove.svg'
+import arrow from './/img/arrow.svg'
 import item00 from './/img/sneakers/item00.svg'
 
 
@@ -15,17 +16,45 @@ function App() {
 
     <div className='overlay'>
       <div className='drawer'>
-      <h2>Корзина</h2>
+      <h2 className='mb-30' >Корзина</h2>
 
-      <div className='cartItem d-flex align-center'>
+      <div className='cartItem d-flex align-center mb-20'>
 
-      <div width={20} height={20} style={{backgroundImage:`url(${item00})`}} ></div>
+      <img src={item00} width={70} height={70} /> 
         <div className='mr-20'>
           <p className='mb-5'>Мужские Кроссовки Nike Blazer Mid Suede</p>
           <b>12 999 руб.</b>
         </div>
         <img className='removeBtn' src={remove}></img>
       </div>
+      <div className='cartItem d-flex align-center mb-20'>
+
+      <img src={item00} width={70} height={70} /> 
+        <div className='mr-20'>
+          <p className='mb-5'>Мужские Кроссовки Nike Blazer Mid Suede</p>
+          <b>12 999 руб.</b>
+        </div>
+        <img className='removeBtn' src={remove}></img>
+      </div>
+      <div className='items'>
+        <div className='cartTotalBlock'>
+            <ul>        
+              <li className='d-flex'>
+                <span>Итого:</span>
+                <div></div>
+                <b>21 498 руб.</b>
+              </li>
+              <li className='d-flex'>
+                <span>Налог 5%:</span>
+                <div></div>
+                <b>1074 руб.</b>
+              </li>
+            </ul>
+            <button className='greenButton'>Оформить заказ <img src={arrow}/></button>
+            </div>
+        </div>
+
+
       </div>
     </div>
 
